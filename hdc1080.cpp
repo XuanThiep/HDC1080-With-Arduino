@@ -15,7 +15,7 @@ void hdc1080::Init(Temp_Reso Temperature_Resolution_x_bit,Humi_Reso Humidity_Res
 	 */
 
 	/* Set the acquisition mode to measure both temperature and humidity by setting Bit[12] to 1 */
-	unsigned int config_reg_value=0x1000;
+	unsigned int config_reg_value=0x3000; //heater enable
 	unsigned char data_send[2];
 
 	if(Temperature_Resolution_x_bit == Temperature_Resolution_11_bit)
